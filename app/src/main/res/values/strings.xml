@@ -2,4 +2,8 @@
     <string name="app_name">Mokgongso_Stack</string>
     <string name="facebook_app_id">1866304723430450</string>
     <string name="fb_login_protocol_scheme">fb1866304723430450</string>
+    <string name="action_mandalart">만다라트</string>
+    <string name="action_diary">일기</string>
+    <string name="action_store">상점</string>
+    <string name="action_setting">설정</string>
 </resources>

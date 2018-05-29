@@ -25,6 +25,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.facebook.android:facebook-login:[4,5)'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
@@ -32,7 +33,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    compile 'com.google.code.gson:gson:2.8.5'
-    compile 'com.facebook.android:facebook-android-sdk:4.+'
-    compile 'com.android.volley:volley:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.facebook.android:facebook-android-sdk:4.+'
+    implementation 'com.android.volley:volley:1.1.0'
+
+    // Wave Library
+    implementation 'me.itangqi.waveloadingview:library:0.3.5'
+    implementation "com.android.support:percent:25.2.0"
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_mandalart"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/action_mandalart"/>
+    <item android:id="@+id/action_diary"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/action_diary"/>
+    <item android:id="@+id/action_store"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/action_store"/>
+    <item android:id="@+id/action_setting"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="@string/action_setting"/>
+</menu>

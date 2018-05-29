@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HamburgerActivity">
+    <item android:id="@+id/close_btn"
+        android:icon="@drawable/ic_cancel"
+        android:title="햄버거 창 닫기 버튼"
+        app:showAsAction="always"/>
+</menu>

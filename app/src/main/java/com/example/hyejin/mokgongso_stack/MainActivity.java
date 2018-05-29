@@ -36,9 +36,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // URL 설정
-        url = "http://iwin247.info:3113/auth/fb";
-
         // AsyncTask를 통해 HtppURLConnection 수행
         //NetworkTask networkTask = new NetworkTask(url, null);
         //networkTask.execute();
@@ -46,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         // 반드시 레이아웃이 적용되기 전에 facebookSDK를 초기화해줘야함.
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         setContentView(R.layout.activity_main);
+
+        // URL 설정
+        url = "http://iwin247.info:3113/auth/fb";
 
         //new getData().execute("");
 
@@ -79,13 +79,16 @@ public class MainActivity extends AppCompatActivity {
 
                         // 페이스북 token
                         String token = loginResult.getAccessToken().getToken();
-                        Toast.makeText(getApplicationContext(), token, Toast.LENGTH_LONG).show();
+                        // Toast.makeText(getApplicationContext(), token, Toast.LENGTH_LONG).show();
 
                         ContentValues values = new ContentValues();
                         values.put("token", token);
 
                         networkTask = new NetworkTask(url, values);
                         networkTask.execute();
+
+                        Intent intent = new Intent(MainActivity.this, MainViewActivity.class);
+                        startActivity(intent);
                     }
                 });
 
