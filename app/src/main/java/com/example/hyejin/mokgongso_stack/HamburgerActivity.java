@@ -1,6 +1,7 @@
 package com.example.hyejin.mokgongso_stack;
 
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -33,8 +34,18 @@ public class HamburgerActivity extends AppCompatActivity {
 
         toolbar.setTitle("");
 
-
         setSupportActionBar(toolbar);
+
+        NavigationView view = (NavigationView) findViewById(R.id.navigation_view_main);
+        view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override public boolean onNavigationItemSelected(MenuItem menuItem) {
+                Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();
+                menuItem.setChecked(true);
+                //mDrawerLayout.closeDrawers();
+                return true;
+            }
+        });
+
     }
 
     @Override

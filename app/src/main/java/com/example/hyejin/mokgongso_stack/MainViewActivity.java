@@ -7,9 +7,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +26,7 @@ public class MainViewActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     WaveLoadingView waveLoadingView;
     TextView Achievement;
+    ImageView logo_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +45,30 @@ public class MainViewActivity extends AppCompatActivity {
 
         Achievement.setText(Achievement.getText() + " " + waveLoadingView.getProgressValue()+"%");
 
+        logo_btn = (ImageView)findViewById(R.id.logo_btn);
+
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
-
+        getSupportActionBar().setTitle("");
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        logo_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainViewActivity.this, MainViewActivity.class);
+                startActivity(intent);
+
+                finish();
+            }
+        });
     }
+
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.hamburger_menu, menu);
+        return true;
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
