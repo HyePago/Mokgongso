@@ -55,13 +55,12 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setReadPermissions(Arrays.asList("public_profile", "email"));
 
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
-//        boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
+        boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
 
-//        if(isLoggedIn){
-//            Toast.makeText(this, "ㅎㅎㅎㅎㅎㅎㅎㅎㅎ", Toast.LENGTH_SHORT).show();
-//            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse( "http://iwin247.info:3113/auth/fb?token=" + callbackManager  ));
-//            startActivity(intent);
-//        }
+        if(isLoggedIn){
+            Intent intent = new Intent(MainActivity.this, MainViewActivity.class);
+            startActivity(intent);
+        }
 
         final Context context = this;
 

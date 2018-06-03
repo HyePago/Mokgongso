@@ -10,7 +10,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import me.itangqi.waveloadingview.WaveLoadingView;
 
 /**
  * Created by Mirim on 2018-05-29.
@@ -19,6 +22,8 @@ import android.widget.Toast;
 public class MainViewActivity extends AppCompatActivity {
     Toolbar toolbar;
     private DrawerLayout mDrawerLayout;
+    WaveLoadingView waveLoadingView;
+    TextView Achievement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,13 @@ public class MainViewActivity extends AppCompatActivity {
 
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        waveLoadingView = (WaveLoadingView)findViewById(R.id.waveLoadingView_main);
+        Achievement = (TextView)findViewById(R.id.Achievement);
+
+        waveLoadingView.setProgressValue(50);
+
+        Achievement.setText(Achievement.getText() + " " + waveLoadingView.getProgressValue()+"%");
 
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);

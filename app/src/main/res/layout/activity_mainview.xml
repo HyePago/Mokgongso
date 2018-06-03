@@ -47,9 +47,9 @@
         <android.support.percent.PercentFrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2">
+            android:layout_weight="1">
             <me.itangqi.waveloadingview.WaveLoadingView
-                android:id="@+id/waveLoadingView2"
+                android:id="@+id/waveLoadingView_main"
                 app:layout_widthPercent="60%"
                 android:layout_height="wrap_content"
                 app:wlv_borderColor="@color/wlv_borderColor"
@@ -58,12 +58,28 @@
                 app:wlv_round_rectangle="true"
                 app:wlv_triangle_direction="north"
 
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
+
 
                 app:wlv_waveAmplitude="70"
                 app:wlv_waveColor="@color/wlv_titleCenterStrokeColor"
                 />
         </android.support.percent.PercentFrameLayout>
+// 6 - 4.3
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="23sp"
+           android:id="@+id/Achievement"
+           android:layout_weight="0.7"
+           android:layout_gravity="center_horizontal"
+           android:text="성취도" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="&#34;병아리는 세상에 태어나기 위하여\n하나의 세상을 깨고 나온다&#34;-데미안"/>
     </LinearLayout>
 </android.support.v4.widget.DrawerLayout>
